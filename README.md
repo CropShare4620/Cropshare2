@@ -5,7 +5,7 @@ I was bored during quarantine, so I'm doing the senior design project over summe
 Using Node.js + Express, ejs, bootstrap
 
 ## Libraries:
-npm install http-errors express path cookie-parser morgan body-parser
+npm install ejs http-errors express path cookie-parser morgan body-parser
 
 ## To run:
 - node bin/www
