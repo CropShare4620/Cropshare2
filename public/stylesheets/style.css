@@ -10605,3 +10605,6 @@ body {
   height: 35vh;
   margin: -20px 0 50px;
 }
+.profile-nav:hover{
+    color:white;
+}
