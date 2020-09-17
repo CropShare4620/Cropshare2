@@ -10603,8 +10603,18 @@ body {
   flex-direction: column;
   font-family: 'Montserrat', sans-serif;
   height: 35vh;
-  margin: -20px 0 50px;
+  margin: 30px 0 0;
+}
+.profile-header-section{
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.5) 75%, #000000 100%);
+    margin:none;
+    padding: 40px 0 20px 0;
 }
 .profile-nav:hover{
     color:white;
+}
+.profile-img{
+    display: block;
+    max-width: 100%;
+    height: auto;
 }
