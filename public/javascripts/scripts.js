@@ -4,13 +4,6 @@
     * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-grayscale/blob/master/LICENSE)
     */
 
-function signUpTransition(){
-    document.getElementById("signin-wrapper").classList.add("right-panel-active");
-}
-function signInTransition(){
-    document.getElementById("signin-wrapper").classList.remove("right-panel-active");
-}
-
 (function ($) {
 "use strict"; // Start of use strict
 
