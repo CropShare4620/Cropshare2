@@ -1,9 +1,91 @@
-const express = require('express')
+const express = require('express');
+const querystr = require('querystring');
+const mysql = require('mysql');
 
-const router = express.Router()
+const router = express.Router();
 
 router.get('/', function(req, res, next) {
-  res.render('user');
+	res.render('user');
+});
+router.post('/signin', function(req, res) {
+
+  	//Ensure that the method was post.
+  	if(req.method === 'POST') {
+			
+  		//Establish connection
+  		var conn = mysql.createConnection({
+			host: "localhost",
+			user: "csauth",
+			password: "KDN3-23FR-DW24-H9RT",
+			database: "csdatabase"
+ 		});
+
+  		conn.connect(function(err) {
+			if(err) throw err;
+		});
+
+  		conn.query("SELECT email FROM cs_users_auth WHERE email = \'" + req.body.email + "\' AND password = \'" + req.body.password + "\';", function(err, results) {
+  			if(err) throw err;
+			else {
+				if(results.length > 0) {
+					conn.end();
+					console.log("Going to marketplace");
+					res.redirect('/marketplace');
+				} else {
+					conn.end();
+					console.log("Failure, rerouting");
+					res.redirect('/user');
+				}
+			}
+		});
+	}
+});
+router.post('/signup', function(req, res) {
+	
+	//Ensure that the method was post.
+	if(req.method === 'POST') {
+		
+		//Check that both password fields match.
+		if(req.body.password === req.body.passwordconf) {
+
+			//Establish connection.
+			var conn = mysql.createConnection({
+				host: "localhost",
+				user: "csauth",
+				password: "KDN3-23FR-DW24-H9RT",
+				database: "csdatabase"
+			});
+
+			conn.connect(function(err) {
+				if(err) throw err;
+			});
+
+			conn.query("SELECT email FROM cs_users_auth WHERE email = \'" + req.body.email + "\';", function(err, results) {
+				if(err) throw err;
+				else {
+					if(results.length > 0) {
+						conn.end();
+						res.redirect('/user');
+					} else {
+
+						var connInsert = mysql.createConnection({
+							host: "localhost",
+							user: "csregstr",
+							password: "54LG-D4GR-WCER-UO3R",
+							database: "csdatabase"
+						});
+
+						var date = new Date();
+						connInsert.query("INSERT INTO cs_users(email, password, name, join_date) VALUES(\'" + req.body.email + "\', \'" + req.body.password + "\', \'" + req.body.name + "\', \'" + date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate() +"\');", function(err) {
+							if(err) throw err;
+						});
+						connInsert.end();
+						res.redirect('/user');
+					}
+				}
+			});
+		}
+	}
 });
 // router.post('/user/signup', async (req, res) => {
 //     // Create a new user
