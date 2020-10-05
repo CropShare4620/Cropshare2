@@ -10626,3 +10626,7 @@ body {
     background-color: transparent;
     border-color: #e9ecef #e9ecef #dee2e6;
 }
+.farmer-modal,
+.grocer-modal{
+    color:black;
+}

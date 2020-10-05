@@ -2,43 +2,15 @@
         <ul class="list-group grocer-list-group">
             <li class="list-group-item grocer-list-group-item">
                 <div class="container">
-                    <div class="row justify-content-center">
+                    <div class="row justify-content-center" id="grocer-tab-1">
                         <div class="col-xl-2 col-lg-2 col-md-2 col-xs-3"><img class="grocer-img" height="100" src="images/grocer_food_image.png" alt="" /></div>
                         <div class="col-xl-9 col-lg-9 col-md-9 col-xs-8">
                             <div class="row">
-                                <div class="col-lg-8"><h2>[Name of Requested Item]</h2></div>
-                                <div class="col-lg-8">[Amount of the Item]</div>
+                                <div class="col-lg-8"><h2>[user.grocer.itemlist.1.name]</h2></div>
+                                <div class="col-lg-8">[user.grocer.itemlist.1.quantity]</div>
                             </div>
                         </div>
-                        <div class="col-xl-1 col-lg-1 col-md-1 col-xs-1">[Edit]<!-- TODO: onclick form function --></div>
-                    </div>
-                </div>
-            </li>
-            <li class="list-group-item grocer-list-group-item">
-                <div class="container">
-                    <div class="row justify-content-center">
-                        <div class="col-xl-2 col-lg-2 col-md-2 col-xs-3"><img class="grocer-img" height="100" src="images/grocer_food_image.png" alt="" /></div>
-                        <div class="col-xl-9 col-lg-9 col-md-9 col-xs-8">
-                            <div class="row">
-                                <div class="col-lg-8"><h2>[Name of Requested Item]</h2></div>
-                                <div class="col-lg-8">[Amount of the Item]</div>
-                            </div>
-                        </div>
-                        <div class="col-xl-1 col-lg-1 col-md-1 col-xs-1">[Edit]</div>
-                    </div>
-                </div>
-            </li>
-            <li class="list-group-item grocer-list-group-item">
-                <div class="container">
-                    <div class="row justify-content-center">
-                        <div class="col-xl-2 col-lg-2 col-md-2 col-xs-3"><img class="grocer-img" height="100" src="images/grocer_food_image.png" alt="" /></div>
-                        <div class="col-xl-9 col-lg-9 col-md-9 col-xs-8">
-                            <div class="row">
-                                <div class="col-lg-8"><h2>[Name of Requested Item]</h2></div>
-                                <div class="col-lg-8">[Amount of the Item]</div>
-                            </div>
-                        </div>
-                        <div class="col-xl-1 col-lg-1 col-md-1 col-xs-1">[Edit]</div>
+                        <div class="col-xl-1 col-lg-1 col-md-1 col-xs-1" onclick="toggleFormModal('grocer-modal-container-1')">[Edit]</div>
                     </div>
                 </div>
             </li>
