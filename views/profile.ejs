@@ -17,8 +17,27 @@
                 </div>
             </div>
             <div class="tab-content" id="nav-tabContent">
-                <div class="tab-pane fade show active" id="nav-farmer" role="tabpanel" aria-labelledby="nav-farmer-tab"><% include partials/profile_page/_farmer.ejs %></div>
-                <div class="tab-pane fade" id="nav-grocer" role="tabpanel" aria-labelledby="nav-grocer-tab"><% include partials/profile_page/_grocer.ejs %></div>
+                <div class="tab-pane fade show active" id="nav-farmer" role="tabpanel" aria-labelledby="nav-farmer-tab">
+                    <section class="farmer-section">
+                        <ul class="list-group farmer-list-group">
+                            <li class="list-group-item farmer-list-group-item">
+                                <%- include('partials/profile_page/_farmer_post.ejs', {index: '1'}) %>
+                                <%- include('partials/profile_page/_farmer_post.ejs', {index: '2'}) %>
+                                <%- include('partials/profile_page/_farmer_post.ejs', {index: '3'}) %>
+                                <%- include('partials/profile_page/_farmer_post.ejs', {index: '4'}) %>
+                            </li>
+                        </ul>
+                    </section>
+                </div>
+                <div class="tab-pane fade" id="nav-grocer" role="tabpanel" aria-labelledby="nav-grocer-tab">
+                    <section class="grocer-section">
+                        <ul class="list-group grocer-list-group">
+                            <li class="list-group-item grocer-list-group-item">
+
+                            </li>
+                        </ul>
+                    </section>
+                </div>
             </div>
         </section>
         <!-- Footer -->
@@ -27,4 +46,6 @@
 </html>
 <!--
     //TODO: I'm going to re-work this entire page, so don't get attached to the formatting. ejs doesn't allow for nested partials because...?...so instead of learning handlebars...I'm making code ugly...:)
+
+    Plans: Put both _farmer and _grocer partials in here, add posts as partials, pass Post id, Item name, Item quantity, and Item price as partial vars. Need to figure out how to link functions dynamically tho...
 -->
