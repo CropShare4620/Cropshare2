@@ -10,21 +10,18 @@
     "body-parser": "^1.19.0",
     "cookie-parser": "^1.4.5",
     "debug": "^2.6.9",
-<<<<<<< HEAD
-    "ejs": "^2.6.2",
-=======
+	
     "ejs": "^2.7.4",
->>>>>>> Development
+
     "express": "^4.17.1",
     "express-validator": "^6.6.0",
     "http-errors": "^1.8.0",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.9.20",
     "morgan": "^1.10.0",
-<<<<<<< HEAD
-=======
+
     "node": "^14.11.0",
->>>>>>> Development
+
     "path": "^0.12.7"
   }
 }
