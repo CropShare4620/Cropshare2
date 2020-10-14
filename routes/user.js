@@ -130,5 +130,4 @@ router.post('/signup', function(req, res) {
 //         res.status(500).send(error)
 //     }
 // })
-cd 
 module.exports = router
