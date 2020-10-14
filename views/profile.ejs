@@ -1,29 +1,49 @@
 <!DOCTYPE html>
 <html>
     <% include partials/general_pages/_layout.ejs %>
-    <body id="page-top">
+	<body id="page-top">
         <!-- Navigation -->
         <% include partials/general_pages/_navigation.ejs %>
-        <!-- Profile area //TODO: Send user info to partial -->
-        <% include partials/profile_page/_profile_info.ejs %>
+
         <!-- Content area (Tri-tab profile based marketplace)
             Must be done like this...no nested partials
             //TODO: Send user info to partial -->
         <section class="profile-section">
-            <nav>
-                <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                    <a class="nav-link active" id="nav-farmer-tab" data-toggle="tab" href="#nav-farmer" role="tab" aria-controls="nav-farmer" aria-selected="true">Farmer</a>
-                    <a class="nav-link" id="nav-grocer-tab" data-toggle="tab" href="#nav-grocer" role="tab" aria-controls="nav-grocer" aria-selected="false">Grocer</a>
-                    <a class="nav-link" id="nav-community-tab" data-toggle="tab" href="#nav-community" role="tab" aria-controls="nav-community" aria-selected="false">Community</a>
+
+            <!-- Profile area //TODO: Send user info to partial -->
+            <% include partials/profile_page/_profile_header.ejs %>
+            <div class="container">
+                <div class="nav nav-tabs nav-justified" id="nav-tab" role="tablist">
+                    <a class="nav-item nav-link profile-nav active" id="nav-farmer-tab" data-toggle="tab" href="#nav-farmer" role="tab" aria-controls="nav-farmer" aria-selected="true">Farmer</a>
+                    <a class="nav-item nav-link profile-nav" id="nav-grocer-tab" data-toggle="tab" href="#nav-grocer" role="tab" aria-controls="nav-grocer" aria-selected="false">Grocer</a>
                 </div>
-            </nav>
+            </div>
             <div class="tab-content" id="nav-tabContent">
-                <div class="tab-pane fade show active" id="nav-farmer" role="tabpanel" aria-labelledby="nav-farmer-tab"><% include partials/profile_page/_farmer.ejs %></div>
-                <div class="tab-pane fade" id="nav-grocer" role="tabpanel" aria-labelledby="nav-grocer-tab"><% include partials/profile_page/_grocer.ejs %></div>
-                <div class="tab-pane fade" id="nav-community" role="tabpanel" aria-labelledby="nav-community-tab"><% include partials/profile_page/_community.ejs %></div>
+                <div class="tab-pane fade show active" id="nav-farmer" role="tabpanel" aria-labelledby="nav-farmer-tab">
+                    <section class="farmer-section">
+                        <ul class="list-group farmer-list-group">
+                            <li class="list-group-item farmer-list-group-item">
+                                <%- include('partials/profile_page/_farmer_post.ejs', {index: '1'}) %>
+                                <%- include('partials/profile_page/_farmer_post.ejs', {index: '2'}) %>
+                                <%- include('partials/profile_page/_farmer_post.ejs', {index: '3'}) %>
+                                <%- include('partials/profile_page/_farmer_post.ejs', {index: '4'}) %>
+                            </li>
+                        </ul>
+                    </section>
+                </div>
+                <div class="tab-pane fade" id="nav-grocer" role="tabpanel" aria-labelledby="nav-grocer-tab">
+                    <section class="grocer-section">
+                        <ul class="list-group grocer-list-group">
+                            <li class="list-group-item grocer-list-group-item">
+
+                            </li>
+                        </ul>
+                    </section>
+                </div>
             </div>
         </section>
         <!-- Footer -->
         <% include partials/general_pages/_footer.ejs %>
     </body>
 </html>
+

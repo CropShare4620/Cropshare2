@@ -1,1 +1,19 @@
-//Fun stuff inserted here
+<!DOCTYPE html>
+<html>
+    <% include partials/general_pages/_layout.ejs %>
+    <body>
+        <!-- Navigation -->
+        <% include partials/general_pages/_navigation.ejs %>
+        <!-- Categories partial (left side) {Selling, buying, providing} -->
+        <div class="container">
+            <div class="row">
+                <% include partials/market_page/_categories.ejs %>
+                <!-- Shop area -->
+                <% include partials/market_page/_shop.ejs %>
+            </div>
+        </div>
+        <!-- Footer -->
+        <% include partials/general_pages/_footer.ejs %>
+    </body>
+</html>
+
