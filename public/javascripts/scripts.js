@@ -4,13 +4,6 @@
     * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-grayscale/blob/master/LICENSE)
     */
 
-function signUpTransition(){
-    document.getElementById("signin-wrapper").classList.add("right-panel-active");
-}
-function signInTransition(){
-    document.getElementById("signin-wrapper").classList.remove("right-panel-active");
-}
-
 (function ($) {
 "use strict"; // Start of use strict
 
@@ -41,6 +34,24 @@ function signInTransition(){
     // Closes responsive menu when a scroll trigger link is clicked
     $(".js-scroll-trigger").click(function () {
         $(".navbar-collapse").collapse("hide");
+    });
+
+    $(document).on('show.bs.modal','#farmer-modal-1', function () {
+        var button = $('#farmer-modal-button-1') // Button that triggered the modal
+
+        var data_name = button.data('name') //TODO: Pull from database, if not...*shrug*
+        var data_quant = button.data('quantity')
+        var data_price = button.data('price')
+        // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+        // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+        var modal = $(this)
+
+        modal.find('.item-name').attr('placeholder', data_name)
+        modal.find('.item-quantity').attr('placeholder', data_quant)
+        modal.find('.item-price').attr('placeholder', data_price)
+    })
+    $("#famer-modal-submit-1").click(function(){
+        alert("The paragraph was clicked.");
     });
 
     // Activate scrollspy to add active class to navbar items on scroll
