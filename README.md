@@ -1,7 +1,5 @@
 # Cropshare
 
-npm install http-errors express path cookie-parser morgan body-parser
-=======
 npm install ejs http-errors express path cookie-parser morgan body-parser
 
 ## To run:
