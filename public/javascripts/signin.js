@@ -12,15 +12,12 @@ The next two functions:
 Author: Michael Lieb
 Taken From: scripts.js
 */
-
 function signUpTransition() {
-
 	document.getElementById("signin-wrapper").classList.add("right-panel-active");
 }
 function signInTransition() {
     	document.getElementById("signin-wrapper").classList.remove("right-panel-active");
 }
-
 
 //The loginValAuth() function takes in an email and a password identification and authenticates them against the database. On success, transfers user to profile page, on failure displays unsuccessful logon message.
 function loginValAuth(email, password) {
@@ -89,4 +86,3 @@ function registerUser(email, name, password, passwordConf) {
 		}
 	}
 }
-
