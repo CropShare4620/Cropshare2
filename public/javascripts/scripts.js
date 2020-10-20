@@ -23,9 +23,6 @@
         modal.find('.item-quantity').attr('placeholder', data_quant)
         modal.find('.item-price').attr('placeholder', data_price)
     })
-    $("#famer-modal-submit-1").click(function(){
-        alert("The paragraph was clicked.");
-    });
     // Activate scrollspy to add active class to navbar items on scroll
     $("body").scrollspy({
         target: "#mainNav",

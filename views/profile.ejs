@@ -19,22 +19,21 @@
             <div class="tab-content" id="nav-tabContent">
                 <div class="tab-pane fade show active" id="nav-farmer" role="tabpanel" aria-labelledby="nav-farmer-tab">
                     <section class="farmer-section">
-                        <ul class="list-group farmer-list-group">
-                            <li class="list-group-item farmer-list-group-item">
-                                <%- include('partials/profile_page/_farmer_post.ejs', {index: '1'}) %>
-                                <%- include('partials/profile_page/_farmer_post.ejs', {index: '2'}) %>
-                                <%- include('partials/profile_page/_farmer_post.ejs', {index: '3'}) %>
-                                <%- include('partials/profile_page/_farmer_post.ejs', {index: '4'}) %>
-                            </li>
+                        <ul class="list-group farmer-list-group" id="farmer-post-list">
+                            <%- include('partials/profile_page/_farmer_post.ejs', {index: '1'}) %>
+                            <%- include('partials/profile_page/_farmer_post.ejs', {index: '2'}) %>
+                            <%- include('partials/profile_page/_farmer_post.ejs', {index: '3'}) %>
+                            <%- include('partials/profile_page/_farmer_post.ejs', {index: '4'}) %>
                         </ul>
                     </section>
                 </div>
                 <div class="tab-pane fade" id="nav-grocer" role="tabpanel" aria-labelledby="nav-grocer-tab">
                     <section class="grocer-section">
                         <ul class="list-group grocer-list-group">
-                            <li class="list-group-item grocer-list-group-item">
-
-                            </li>
+                            <%- include('partials/profile_page/_grocer_post.ejs', {index: '1'}) %>
+                            <%- include('partials/profile_page/_grocer_post.ejs', {index: '2'}) %>
+                            <%- include('partials/profile_page/_grocer_post.ejs', {index: '3'}) %>
+                            <%- include('partials/profile_page/_grocer_post.ejs', {index: '4'}) %>
                         </ul>
                     </section>
                 </div>

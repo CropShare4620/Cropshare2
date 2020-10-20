@@ -5,13 +5,24 @@
         <!-- Navigation -->
         <% include partials/general_pages/_navigation.ejs %>
         <!-- Categories partial (left side) {Selling, buying, providing} -->
-        <div class="container">
-            <div class="row">
-                <% include partials/market_page/_categories.ejs %>
-                <!-- Shop area -->
-                <% include partials/market_page/_shop.ejs %>
+        <section class="marketplace">
+            <div class="container">
+                <div class="row">
+                    <% include partials/market_page/_categories.ejs %>
+                    <!-- Shop area -->
+                    <div class="col-lg-9 market-section">
+                        <div class="row">
+                        <%- include('partials/market_page/_item.ejs', {index: '1'}) %>
+                        <%- include('partials/market_page/_item.ejs', {index: '2'}) %>
+                        <%- include('partials/market_page/_item.ejs', {index: '3'}) %>
+                        <%- include('partials/market_page/_item.ejs', {index: '4'}) %>
+                        <%- include('partials/market_page/_item.ejs', {index: '5'}) %>
+                        <%- include('partials/market_page/_item.ejs', {index: '6'}) %>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
+        </section>
         <!-- Footer -->
         <% include partials/general_pages/_footer.ejs %>
     </body>
