@@ -10601,14 +10601,6 @@ body {
   background-attachment: scroll;
   background-size: cover;
   display: flex;
-<<<<<<< HEAD
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  font-family: 'Montserrat', sans-serif;
-  height: 35vh;
-  margin: -20px 0 50px;
-=======
   align-items: center;
   flex-direction: column;
   font-family: 'Montserrat', sans-serif;
@@ -10636,7 +10628,6 @@ body {
 .farmer-modal,
 .grocer-modal{
     color:black;
->>>>>>> Development
 }
 .marketplace{
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.5) 75%, #000000 100%), url("../images/bg-signup.jpg");
@@ -10657,6 +10648,11 @@ body {
     background-color: transparent;
     border-color: #e9ecef #e9ecef #dee2e6;
 }
-.card-body a:hover{
+.marketplace-nav{
+    border:1px solid white;
+}
+.marketplace-nav:hover,
+.card-body a:hover,
+.list-group-item:hover{
     color:white;
 }
