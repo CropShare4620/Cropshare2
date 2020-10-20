@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html>
     <% include partials/general_pages/_layout.ejs %>
-    <body>
+	<body id="page-top">
         <!-- Navigation -->
         <% include partials/general_pages/_navigation.ejs %>
+
         <!-- Content area (Tri-tab profile based marketplace)
             Must be done like this...no nested partials
             //TODO: Send user info to partial -->
         <section class="profile-section">
+
             <!-- Profile area //TODO: Send user info to partial -->
             <% include partials/profile_page/_profile_header.ejs %>
             <div class="container">
@@ -43,8 +45,4 @@
         <% include partials/general_pages/_footer.ejs %>
     </body>
 </html>
-<!--
-    //TODO: I'm going to re-work this entire page, so don't get attached to the formatting. ejs doesn't allow for nested partials because...?...so instead of learning handlebars...I'm making code ugly...:)
 
-    Plans: Put both _farmer and _grocer partials in here, add posts as partials, pass Post id, Item name, Item quantity, and Item price as partial vars. Need to figure out how to link functions dynamically tho...
--->

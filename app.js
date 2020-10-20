@@ -8,7 +8,9 @@ var bodyParser = require('body-parser');
 var indexRouter = require('./routes/index');
 var userRouter = require('./routes/user');
 var profileRouter = require('./routes/profile');
+
 var marketRouter = require('./routes/market');
+
 
 var app = express();
 
@@ -18,18 +20,22 @@ app.set('view engine', 'ejs');
 
 app.use(logger('dev'));
 app.use(express.json());
+
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+
 app.use('/', indexRouter);
 app.use('/user', userRouter);
 app.use('/profile', profileRouter);
+
 app.use('/market', marketRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   res.status(404).render('404');
+
 });
 
 // error handler

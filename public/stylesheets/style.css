@@ -1,5 +1,7 @@
 @charset "UTF-8";
 
+
+
 /*
  * Bootstrap v4.5.0 (https://getbootstrap.com/)
  * Copyright 2011-2020 The Bootstrap Authors
@@ -64,7 +66,9 @@
 
 html {
   font-family: sans-serif;
+
   scroll-behavior: smooth;
+
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -10597,6 +10601,14 @@ body {
   background-attachment: scroll;
   background-size: cover;
   display: flex;
+<<<<<<< HEAD
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: 'Montserrat', sans-serif;
+  height: 35vh;
+  margin: -20px 0 50px;
+=======
   align-items: center;
   flex-direction: column;
   font-family: 'Montserrat', sans-serif;
@@ -10624,6 +10636,7 @@ body {
 .farmer-modal,
 .grocer-modal{
     color:black;
+>>>>>>> Development
 }
 .marketplace{
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.5) 75%, #000000 100%), url("../images/bg-signup.jpg");
