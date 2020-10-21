@@ -1,17 +1,20 @@
 const express = require('express');
 const querystr = require('querystring');
 const mysql = require('mysql');
+const express = require('express')
 
 const router = express.Router();
+const router = express.Router()
 
 router.get('/', function(req, res, next) {
 	res.render('user');
+  res.render('user');
 });
 router.post('/signin', function(req, res) {
 
   	//Ensure that the method was post.
   	if(req.method === 'POST') {
-			
+
   		//Establish connection
   		var conn = mysql.createConnection({
 			host: "localhost",
@@ -41,10 +44,10 @@ router.post('/signin', function(req, res) {
 	}
 });
 router.post('/signup', function(req, res) {
-	
+
 	//Ensure that the method was post.
 	if(req.method === 'POST') {
-		
+
 		//Check that both password fields match.
 		if(req.body.password === req.body.passwordconf) {
 
