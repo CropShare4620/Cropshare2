@@ -8,7 +8,6 @@ const router = express.Router()
 
 router.get('/', function(req, res, next) {
 	res.render('user');
-  res.render('user');
 });
 router.post('/signin', function(req, res) {
 
@@ -36,12 +35,12 @@ router.post('/signin', function(req, res) {
 					res.redirect('/marketplace');
 				} else {
 					conn.end();
-					console.log("Failure, rerouting");
-					res.redirect('/user');
 				}
 			}
 		});
 	}
+	console.log("Failure, rerouting");
+	res.redirect('/user');
 });
 router.post('/signup', function(req, res) {
 
@@ -83,12 +82,13 @@ router.post('/signup', function(req, res) {
 							if(err) throw err;
 						});
 						connInsert.end();
-						res.redirect('/user');
+						
 					}
 				}
 			});
 		}
 	}
+	res.redirect('/user');
 });
 // router.post('/user/signup', async (req, res) => {
 //     // Create a new user

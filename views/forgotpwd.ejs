@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<% include partials/general_pages/_layout.ejs %>
+	<body>
+		<% include partials/general_pages/_navigation.ejs %>
+		<section class="forgot-section">
+			<div class="form-container forgot-container">
+				<form class="forgot-form" action="/forgotpwd/result" method="post">
+					<h1 class="forgot-label">Locked Out?</h1>
+					<h6 class="forgot-label">Enter the email binded to your CropShare account and we will send a password reset link to that email.</h6>
+					<input class="forgot-input" name="email" type="text" placeholder="Email">
+					<button class="btn-forgot" type="submit">Send</button>
+				</form>
+			</div>
+		</section>
+		<% include partials/general_pages/_footer.ejs %>
+	</body>
+</html>
