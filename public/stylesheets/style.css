@@ -10630,3 +10630,58 @@ body {
 .grocer-modal{
     color:black;
 }
+
+.forgot-section {
+	padding: 10rem 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	font-family: Montserrat, sans-serif;
+	height: 100vh;
+	margin: -20px 0 50px;
+}
+.forgot-container {
+	background-color: #fff;
+	position: relative;
+	border-radius: 10px;
+	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+	overflow: hidden;
+	width: 384px;
+	max-width: 100%;
+	min-height: 480px;
+}
+.forgot-form {
+	background-color: var(--signup-active-bg);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	padding: 0 50px;
+	text-align: center;
+	height: 100%;
+}
+.forgot-input {
+	background-color: #eee;
+	border: none;
+	padding: 12px 15px;
+	margin: 18px 0;
+	width: 100%;
+}
+.btn-forgot {
+	border-radius: 20px;
+	border: 1px solid var(--signup-btn-inactive);
+	background-color: var(--signup-btn-inactive);
+	color: #FFFFFF;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 12px 45px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	transition: transform 80ms ease-in;
+}
+.forgot-label {
+	color: #000000;
+	font-weight: bold;
+	margin: 18px 0;
+}
