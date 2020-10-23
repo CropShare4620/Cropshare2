@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<% include partials/general_pages/_layout.ejs %>
+	<body>
+		<% include partials/general_pages/_navigation.ejs %>
+		<section class="forgot-section">
+			<div class="form-container forgot-container">
+				<form class="forgot-form" action="/resetpwd/result" method="post">
+					<h3 class="forgot-label">Please enter a new password.</h3>
+					<input class="forgot-input" name="passwd" type="text" placeholder="Password"></input>
+					<input class="forgot-input" name="passwdconf" type="text" placeholder="Retype Password"></input>
+					<button class="btn-forgot" type="submit">Reset</button>
+				</form>
+			</div>
+		</section>
+		<% include partials/general_pages/_footer.ejs %>
+	</body>
+</html>
