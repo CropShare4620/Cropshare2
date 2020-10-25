@@ -19,7 +19,7 @@ router.post('/post_available_produce', function(req, res) {
         conn.connect(function(err) {
             if(err) throw err;
         });
-
+        
         conn.query("INSERT INTO available_produce (produce_type, name, email, quantity, price) VALUES (\'" + req.body.type + "\', " + req.body.name + "\', " + req.body.email + "\', " + req.body.quantity + "\', " + req.body.price + "\');", function(err, results) {
             if(err) throw err;
           });

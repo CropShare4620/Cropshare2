@@ -24,18 +24,28 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form>
+                    <!-- Edited for database querry; no idea if this is correct -->
+                    <form action="/profile/signup" method="post">
                         <div class="form-group">
-                            <label for="item-name-label" class="col-form-label">Item Name:</label>
+                            <label for="item-name-label" class="col-form-label" name="type">Item Name:</label>
                             <input type="text" class="form-control item-name" id="farmer-modal-item-name-input-<%= index %>">
                         </div>
                         <div class="form-group">
-                            <label for="item-quantity-label" class="col-form-label">Item Quantity:</label>
+                            <label for="item-quantity-label" class="col-form-label" name="quantity">Item Quantity:</label>
                             <input type="text" class="form-control item-quantity" id="farmer-modal-item-quantity-input-<%= index %>"></input>
                         </div>
                         <div class="form-group">
-                            <label for="item-price-label" class="col-form-label">Item Price:</label>
+                            <label for="item-price-label" class="col-form-label" name="price">Item Price:</label>
                             <input type="text" class="form-control item-price" id="farmer-modal-item-price-input-<%= index %>"></input>
+                        </div>
+                        <div class="form-group">
+                            <label for="item-vendor-label" class="col-form-label" name="name">Vendor Name:</label>
+                            <input type="text" class="form-control item-vendor" id="farmer-modal-item-vendor-input-<%= index %>"></input>
+                        </div>
+                        <!-- NOTE: This should not just be a contact email, but the user's registered email. But idk how to do that-->
+                        <div class="form-group">
+                            <label for="item-email-label" class="col-form-label" name="email">Contact Email:</label>
+                            <input type="text" class="form-control item-email" id="farmer-modal-item-email-input-<%= index %>"></input>
                         </div>
                     </form>
                 </div>
