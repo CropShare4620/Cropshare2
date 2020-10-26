@@ -27,21 +27,19 @@ router.post('/result', function(req, res, next) {
 				if(results.length > 0) {
 					conn.end();
 					console.log("Email validated");
+
+					//Uncomment when email is working.
 					/*
 					var transport = mailsend.createTransport({
-						host: "
-						port:
-						secure:
-						auth: {
-							user:
-							pass:
-						},
+						host: "stmp.cropshare.com",
+						port: 587,
+						secure: false
 					});
 					var message = await transport.sendMail({
 						from: "CropShareResetPasswordDaemon@CropShare.com",
-						to: req.body.email
-						subject: "CropShare Password Reset"
-						text: 
+						to: req.body.email,
+						subject: "CropShare Password Reset",
+						text: "LINK GOES HERE"
 					});*/
 				} else {
 					conn.end();
@@ -50,6 +48,6 @@ router.post('/result', function(req, res, next) {
 			}
 		});
 	}
-	req.render('/');
+	res.redirect('/forgotpwd');
 });
 module.exports = router
