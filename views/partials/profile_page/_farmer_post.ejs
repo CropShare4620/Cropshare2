@@ -1,47 +1,62 @@
-<div class="container">
-    <div class="row justify-content-center" id="farmer-tab-<%= index %>">
-        <div class="col-xl-2 col-lg-2 col-md-2 col-xs-3"><img class="farmer-img" height="100" src="images/farmer_food_image.png" alt="" /></div>
-        <div class="col-xl-8 col-lg-8 col-md-8 col-xs-7">
-            <div class="row">
-                <div class="col-lg-8"><h2>[user.farmer.itemlist.<%= index %>.name]</h2></div>
-                <div class="col-lg-8">[user.farmer.itemlist.<%= index %>.quantity]</div>
-                <div class="col-lg-8">[user.farmer.itemlist.<%= index %>.price]</div>
+<!--
+DEFINE:
+user_index
+item_name
+item_quantity
+item_price
+item_description
+-->
+<li class="list-group-item farmer-list-group-item">
+    <div class="container">
+        <div class="row justify-content-center" id="farmer-tab-<%= user_index %>">
+            <div class="col-xl-2 col-lg-2 col-md-2 col-xs-3"><img class="farmer-img" height="100" src="images/farmer_food_image.png" alt="" /></div>
+            <div class="col-xl-8 col-lg-8 col-md-8 col-xs-7">
+                <div class="row">
+                    <div class="col-lg-8"><h2><%= item_name %></h2></div>
+                    <div class="col-lg-8"><%= item_quantity %></div>
+                    <div class="col-lg-8"><%= item_price %></div>
+                    <div class="col-lg-8"><%= item_description %></div>
+                </div>
             </div>
-        </div>
-        <div class="col-xl-2 col-lg-2 col-md-2 col-xs-2">
-            <button type="button" class="btn btn-outline-light btn-sm" id="farmer-modal-button-<%= index %>" data-toggle="modal" data-target="#farmer-modal" data-name="user.farmer.itemlist.i.name" data-quantity="user.farmer.itemlist.i.quantity" data-price="user.farmer.itemlist.i.price">Edit</button>
-        </div>
-    </div>
-</div>
-<div class="modal farmer-modal fade" id="farmer-modal-<%= index %>" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5>Edit Post</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <form>
-                    <div class="form-group">
-                        <label for="item-name-label" class="col-form-label">Item Name:</label>
-                        <input type="text" class="form-control item-name" id="farmer-modal-item-name-input-<%= index %>">
-                    </div>
-                    <div class="form-group">
-                        <label for="item-quantity-label" class="col-form-label">Item Quantity:</label>
-                        <input type="text" class="form-control item-quantity" id="farmer-modal-item-quantity-input-<%= index %>"></input>
-                    </div>
-                    <div class="form-group">
-                        <label for="item-price-label" class="col-form-label">Item Price:</label>
-                        <input type="text" class="form-control item-price" id="farmer-modal-item-price-input-<%= index %>"></input>
-                    </div>
-                </form>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-secondary btn-sm" id="famer-modal-submit-<%= index %>" data-dismiss="modal">Save Changes</button>
+            <div class="col-xl-2 col-lg-2 col-md-2 col-xs-2">
+                <button type="button" class="btn btn-outline-light btn-sm" id="farmer-modal-button-<%= user_index %>" data-toggle="modal" data-target="#farmer-modal-<%= user_index %>">Edit</button>
             </div>
         </div>
     </div>
-</div>
+    <div class="modal farmer-modal fade" id="farmer-modal-<%= user_index %>" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>Edit Post</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="item-name-label" class="col-form-label">Item Name:</label>
+                            <input type="text" class="form-control" placeholder="<%= item_name %>">
+                        </div>
+                        <div class="form-group">
+                            <label for="item-quantity-label" class="col-form-label">Item Quantity:</label>
+                            <input type="text" class="form-control"" placeholder="<%= item_quantity %>"></input>
+                        </div>
+                        <div class="form-group">
+                            <label for="item-price-label" class="col-form-label">Item Price:</label>
+                            <input type="text" class="form-control"" placeholder="<%= item_price %>"></input>
+                        </div>
+                        <div class="form-group">
+                            <label for="item-description-label" class="col-form-label">Item Description:</label>
+                            <input type="text" class="form-control"" placeholder="<%= item_description %>"></input>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-secondary btn-sm" id="famer-modal-submit-<%= user_index %>" data-dismiss="modal">Save Changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</li>

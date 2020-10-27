@@ -5,13 +5,43 @@
         <!-- Navigation -->
         <% include partials/general_pages/_navigation.ejs %>
         <!-- Categories partial (left side) {Selling, buying, providing} -->
-        <div class="container">
-            <div class="row">
-                <% include partials/market_page/_categories.ejs %>
-                <!-- Shop area -->
-                <% include partials/market_page/_shop.ejs %>
-            </div>
-        </div>
+        <section class="marketplace">
+           <div class="container">
+               <div class="row">
+                   <% include partials/market_page/_categories.ejs %>
+                   <div class="col-lg-3">
+                       <h1 class="my-4">Shop Name</h1>
+                       <div class="list-group bg-transparent">
+                           <a class="nav-item nav-link marketplace-nav active" id="nav-farmer-tab" data-toggle="tab" href="#nav-farmer" role="tab" aria-controls="nav-farmer">Farmer</a>
+                           <a class="nav-item nav-link marketplace-nav" id="nav-grocer-tab" data-toggle="tab" href="#nav-grocer" role="tab" aria-controls="nav-grocer">Grocer</a>
+                       </div>
+                   </div>
+                   <!-- Shop area -->
+                   <div class="col-lg-9 market-section tab-content" id="nav-tabContent">
+                       <div class="tab-pane fade show active" id="nav-farmer" role="tabpanel" aria-labelledby="nav-farmer-tab">
+                           <div class="row">
+                               <%- include("partials/market_page/_item.ejs", {item_name: "Tomatoes", item_price:"2.50", item_description:"They're red", item_seller:"Bob D."}) %>
+                               <%- include("partials/market_page/_item.ejs", {item_name: "Potatoes", item_price:"3.50", item_description:"From the ground", item_seller:"Jimmy H."}) %>
+                               <%- include("partials/market_page/_item.ejs", {item_name: "Pumpkins", item_price:"3.00", item_description:"In this season", item_seller:"James D."}) %>
+                               <%- include("partials/market_page/_item.ejs", {item_name: "Zuccinni", item_price:"1.75", item_description:"Long and green", item_seller:"Brian B."}) %>
+                               <%- include("partials/market_page/_item.ejs", {item_name: "Cucumber", item_price:"1.75", item_description:"Long and green", item_seller:"Gregory I."}) %>
+                               <%- include("partials/market_page/_item.ejs", {item_name: "Bacon", item_price:"6.50", item_description:"It's...it's bacon", item_seller:"Lauren C."}) %>
+                           </div>
+                       </div>
+                       <div class="tab-pane fade" id="nav-grocer" role="tabpanel" aria-labelledby="nav-grocer-tab">
+                           <div class="row">
+                               <%- include("partials/market_page/_item.ejs", {item_name: "Tomatoes", item_price:"1.50", item_description:"They're red", item_seller:"Bob D."}) %>
+                               <%- include("partials/market_page/_item.ejs", {item_name: "Potatoes", item_price:"1.50", item_description:"From the ground", item_seller:"Jimmy H."}) %>
+                               <%- include("partials/market_page/_item.ejs", {item_name: "Pumpkins", item_price:"1.00", item_description:"In this season", item_seller:"James D."}) %>
+                               <%- include("partials/market_page/_item.ejs", {item_name: "Zuccinni", item_price:"2.75", item_description:"Long and green", item_seller:"Brian B."}) %>
+                               <%- include("partials/market_page/_item.ejs", {item_name: "Cucumber", item_price:"3.75", item_description:"Long and green", item_seller:"Gregory I."}) %>
+                               <%- include("partials/market_page/_item.ejs", {item_name: "Bacon", item_price:"4.50", item_description:"It's...it's bacon", item_seller:"Lauren C."}) %>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+           </div>
+        </section>
         <!-- Footer -->
         <% include partials/general_pages/_footer.ejs %>
     </body>

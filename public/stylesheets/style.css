@@ -10630,3 +10630,11 @@ body {
 .grocer-modal{
     color:black;
 }
+.marketplace-nav{
+    border:1px solid white;
+}
+.marketplace-nav:hover,
+.card-body a:hover,
+.list-group-item:hover{
+    color:white;
+}
