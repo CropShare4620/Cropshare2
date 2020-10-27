@@ -1,14 +1,11 @@
 const express = require('express');
 const querystr = require('querystring');
 const mysql = require('mysql');
-const express = require('express')
 
 const router = express.Router();
-const router = express.Router()
 
 router.get('/', function(req, res, next) {
 	res.render('user');
-  res.render('user');
 });
 router.post('/signin', function(req, res) {
 
