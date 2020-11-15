@@ -27,20 +27,10 @@ router.post('/result', function(req, res, next) {
 				if(results.length > 0) {
 					conn.end();
 					console.log("Email validated");
+					
+					//Added on 11.14.2020
+					res.redirect('/resetpwd');
 
-					//Uncomment when email is working.
-					/*
-					var transport = mailsend.createTransport({
-						host: "stmp.cropshare.com",
-						port: 587,
-						secure: false
-					});
-					var message = await transport.sendMail({
-						from: "CropShareResetPasswordDaemon@CropShare.com",
-						to: req.body.email,
-						subject: "CropShare Password Reset",
-						text: "LINK GOES HERE"
-					});*/
 				} else {
 					conn.end();
 					console.log("Email not found");
