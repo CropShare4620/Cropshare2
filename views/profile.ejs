@@ -1,14 +1,21 @@
 <!DOCTYPE html>
 <html>
     <% include partials/general_pages/_layout.ejs %>
-    <body>
+	<body id="page-top">
         <!-- Navigation -->
         <% include partials/general_pages/_navigation.ejs %>
+
         <!-- Content area (Tri-tab profile based marketplace)
             Must be done like this...no nested partials
             //TODO: Send user info to partial -->
         <section class="profile-section">
+<<<<<<< HEAD
             <%- include('partials/profile_page/_profile_header.ejs', {user_name:"John Doe", user_contact_information:"John@doe.net", user_zip_code:"38505"}) %>
+=======
+
+            <!-- Profile area //TODO: Send user info to partial -->
+            <% include partials/profile_page/_profile_header.ejs %>
+>>>>>>> 02e238cd054f029ff0209f9b5176d546ce0c63d2
             <div class="container">
                 <div class="nav nav-tabs nav-justified" id="nav-tab" role="tablist">
                     <a class="nav-item nav-link profile-nav active" id="nav-farmer-tab" data-toggle="tab" href="#nav-farmer" role="tab" aria-controls="nav-farmer" aria-selected="true">Farmer</a>
@@ -18,19 +25,34 @@
             <div class="tab-content" id="nav-tabContent">
                 <div class="tab-pane fade show active" id="nav-farmer" role="tabpanel" aria-labelledby="nav-farmer-tab">
                     <section class="farmer-section">
+<<<<<<< HEAD
                         <ul class="list-group farmer-list-group">
                             <%- include('partials/profile_page/_farmer_post.ejs', {user_index:"1", item_name:"Potato", item_quantity:"1", item_price:"300.00", item_description:"One big potato"}) %>
                             <%- include('partials/profile_page/_farmer_post.ejs', {user_index:"2", item_name:"Tomatoes", item_quantity:"500", item_price:"14.99", item_description:"300 pounds of tomatoes"}) %>
                             <%- include('partials/profile_page/_farmer_post.ejs', {user_index:"3", item_name:"Carrot", item_quantity:"1", item_price:"12.34", item_description:"It orange"}) %>
                             <%- include('partials/profile_page/_farmer_post.ejs', {user_index:"4", item_name:"Potato", item_quantity:"1", item_price:"299.99", item_description:"One not as big potato"}) %>
+=======
+                        <ul class="list-group farmer-list-group" id="farmer-post-list">
+                            <%- include('partials/profile_page/_farmer_post.ejs', {index: '1'}) %>
+                            <%- include('partials/profile_page/_farmer_post.ejs', {index: '2'}) %>
+                            <%- include('partials/profile_page/_farmer_post.ejs', {index: '3'}) %>
+                            <%- include('partials/profile_page/_farmer_post.ejs', {index: '4'}) %>
+>>>>>>> 02e238cd054f029ff0209f9b5176d546ce0c63d2
                         </ul>
                     </section>
                 </div>
                 <div class="tab-pane fade" id="nav-grocer" role="tabpanel" aria-labelledby="nav-grocer-tab">
                     <section class="grocer-section">
                         <ul class="list-group grocer-list-group">
+<<<<<<< HEAD
                             <%- include('partials/profile_page/_grocer_post.ejs', {user_index:"1", item_name:"Potato", item_quantity:"1"}) %>
                             <%- include('partials/profile_page/_grocer_post.ejs', {user_index:"2", item_name:"Tomatoes", item_quantity:"500"}) %>
+=======
+                            <%- include('partials/profile_page/_grocer_post.ejs', {index: '1'}) %>
+                            <%- include('partials/profile_page/_grocer_post.ejs', {index: '2'}) %>
+                            <%- include('partials/profile_page/_grocer_post.ejs', {index: '3'}) %>
+                            <%- include('partials/profile_page/_grocer_post.ejs', {index: '4'}) %>
+>>>>>>> 02e238cd054f029ff0209f9b5176d546ce0c63d2
                         </ul>
                     </section>
                 </div>
@@ -40,8 +62,4 @@
         <% include partials/general_pages/_footer.ejs %>
     </body>
 </html>
-<!--
-    //TODO: I'm going to re-work this entire page, so don't get attached to the formatting. ejs doesn't allow for nested partials because...?...so instead of learning handlebars...I'm making code ugly...:)
 
-    Plans: Put both _farmer and _grocer partials in here, add posts as partials, pass Post id, Item name, Item quantity, and Item price as partial vars. Need to figure out how to link functions dynamically tho...
--->

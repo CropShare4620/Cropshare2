@@ -1,11 +1,22 @@
 const express = require('express');
 const querystr = require('querystring');
 const mysql = require('mysql');
+<<<<<<< HEAD
 
 const router = express.Router();
 
 router.get('/', function(req, res, next) {
 	res.render('user');
+=======
+const express = require('express')
+
+const router = express.Router();
+const router = express.Router()
+
+router.get('/', function(req, res, next) {
+	res.render('user');
+  res.render('user');
+>>>>>>> 02e238cd054f029ff0209f9b5176d546ce0c63d2
 });
 router.post('/signin', function(req, res) {
 
@@ -130,4 +141,8 @@ router.post('/signup', function(req, res) {
 //         res.status(500).send(error)
 //     }
 // })
+<<<<<<< HEAD
 module.exports = router
+=======
+module.exports = router
+>>>>>>> 02e238cd054f029ff0209f9b5176d546ce0c63d2

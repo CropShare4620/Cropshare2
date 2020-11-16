@@ -2,22 +2,23 @@
 <section class="signup-section" id="signup">
     <div class="signin-wrapper" id="signin-wrapper">
         <div class="form-container sign-up-container">
-        	<form class="signin-form" action="/user/signup">
+        	<form class="signin-form" action="/user/signup" method="post">
         		<h1 class="signin-label">Sign Up</h1>
-        		<input class="signin-input" id="name-reg" type="text" placeholder="Name"/>
-        		<input class="signin-input" id="email-reg" type="email" placeholder="Email"/>
-                	<input class="signin-input" id="pwrd-reg" type="password" placeholder="Password" />
-                	<input class="signin-input" id="pwrd-conf" type="password" placeholder="Confirm Password"/>
-        		<button class="btn-sign" onclick="registerUser(document.getElementById('email-reg').value, document.getElementById('name-reg').value, document.getElementById('pwrd-reg').value, document.getElementById('pwrd-conf').value)">Sign Up</button>
+        		<input class="signin-input" id="name-reg" name="name" type="text" placeholder="Name"/>
+        		<input class="signin-input" id="email-reg" name="email" type="email" placeholder="Email"/>
+                	<input class="signin-input" id="pwrd-reg" name="password" type="password" placeholder="Password" />
+                	<input class="signin-input" id="pwrd-conf" name="passwordconf" type="password" placeholder="Confirm Password"/>
+        		<button class="btn-sign" type="submit">Sign Up</button>
         	</form>
         </div>
         <div class="form-container sign-in-container">
-        	<form class="signin-form" action="/user">
+        	<form class="signin-form" action="/user/signin" method="post">
         		<h1 class="signin-label">Sign in</h1>
-        		<input class="signin-input" id="email-sign" type="email" placeholder="Email"/>
-        		<input class="signin-input" id="pwrd-sign" type="password" placeholder="Password"/>
+        		<input class="signin-input" id="email-sign" name="email" type="email" placeholder="Email"/>
+        		<input class="signin-input" id="pwrd-sign" name="password" type="password" placeholder="Password"/>
         		<a class="signin-link" href="#">Forgot your password?</a>
-        		<button class="btn-sign" onclick="loginValAuth(document.getElementById('email-sign').value, document.getElementById('pwrd-sign').value)">Sign In</button>
+        		<button class="btn-sign" type="submit">Sign In</button>
+
         	</form>
         </div>
         <div class="overlay-container">
@@ -28,7 +29,9 @@
         			<button class="btn-sign" id="signIn" onclick="signInTransition()">Sign In</button>
         		</div>
         		<div class="overlay-panel overlay-right">
-                    <h1 class="signin-label">Sign up here</h1>
+
+                    		<h1 class="signin-label">Sign up here</h1>
+
         			<p class="signin-p">Don't have an account?</p>
         			<button class="btn-sign" id="signUp" onclick="signUpTransition()">Sign Up</button>
         		</div>

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!--
 DEFINE:
 user_index
@@ -20,6 +21,24 @@ item_quantity
         </div>
     </div>
     <div class="modal grocer-modal fade" id="grocer-modal-<%= user_index %>" tabindex="-1" role="dialog" aria-hidden="true">
+=======
+<li class="list-group-item grocer-list-group-item">
+    <div class="container">
+        <div class="row justify-content-center" id="grocer-tab-<%= index %>">
+            <div class="col-xl-2 col-lg-2 col-md-2 col-xs-3"><img class="grocer-img" height="100" src="images/grocer_food_image.png" alt="" /></div>
+            <div class="col-xl-8 col-lg-8 col-md-8 col-xs-7">
+                <div class="row">
+                    <div class="col-lg-8"><h2>[user.grocer.itemlist.<%= index %>.name]</h2></div>
+                    <div class="col-lg-8">[user.grocer.itemlist.<%= index %>.quantity]</div>
+                </div>
+            </div>
+            <div class="col-xl-2 col-lg-2 col-md-2 col-xs-2">
+                <button type="button" class="btn btn-outline-light btn-sm" id="grocer-modal-button-<%= index %>" data-toggle="modal" data-target="#grocer-modal" data-name="user.grocer.itemlist.i.name" data-quantity="user.grocer.itemlist.i.quantity" data-price="user.grocer.itemlist.i.price">Edit</button>
+            </div>
+        </div>
+    </div>
+    <div class="modal grocer-modal fade" id="grocer-modal-<%= index %>" tabindex="-1" role="dialog" aria-hidden="true">
+>>>>>>> 02e238cd054f029ff0209f9b5176d546ce0c63d2
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -31,18 +50,32 @@ item_quantity
                 <div class="modal-body">
                     <form>
                         <div class="form-group">
+<<<<<<< HEAD
                             <label for="item_name-label" class="col-form-label">Item Name:</label>
                             <input type="text" class="form-control" placeholder="<%= item_name %>">
                         </div>
                         <div class="form-group">
                             <label for="item_quantity-label" class="col-form-label">Item Quantity:</label>
                             <input type="text" class="form-control"" placeholder="<%= item_quantity %>"></input>
+=======
+                            <label for="item-name-label" class="col-form-label">Item Name:</label>
+                            <input type="text" class="form-control item-name" id="grocer-modal-item-name-input-<%= index %>">
+                        </div>
+                        <div class="form-group">
+                            <label for="item-quantity-label" class="col-form-label">Item Quantity:</label>
+                            <input type="text" class="form-control item-quantity" id="grocer-modal-item-quantity-input-<%= index %>"></input>
+>>>>>>> 02e238cd054f029ff0209f9b5176d546ce0c63d2
                         </div>
                     </form>
                 </div>
                 <div class="modal-footer">
+<<<<<<< HEAD
                     <button type="button" class="btn btn-secondary btn-sm" id="famer-modal-submit-<%= user_index %>" data-dismiss="modal">Save Changes</button>
                     <button type="button" class="btn btn-secondary btn-sm" id="famer-modal-delete-<%= user_index %>" data-dismiss="modal">Delete post</button>
+=======
+                    <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-secondary btn-sm" id="grocer-modal-submit-<%= index %>" data-dismiss="modal">Save Changes</button>
+>>>>>>> 02e238cd054f029ff0209f9b5176d546ce0c63d2
                 </div>
             </div>
         </div>
