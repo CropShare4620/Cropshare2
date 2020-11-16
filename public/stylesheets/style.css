@@ -10631,7 +10631,8 @@ body {
     border-color: #e9ecef #e9ecef #dee2e6;
 }
 .farmer-modal,
-.grocer-modal{
+.grocer-modal,
+.profile-modal{
     color:black;
 }
 .marketplace-nav{
@@ -10645,4 +10646,8 @@ body {
 .card-body a:hover,
 .list-group-item:hover{
     color:white;
+}
+#profile-modal-button{
+    position: absolute;
+    right:0;
 }

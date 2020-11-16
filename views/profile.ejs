@@ -8,8 +8,7 @@
             Must be done like this...no nested partials
             //TODO: Send user info to partial -->
         <section class="profile-section">
-            <!-- Profile area //TODO: Send user info to partial -->
-            <% include partials/profile_page/_profile_header.ejs %>
+            <%- include('partials/profile_page/_profile_header.ejs', {user_name:"John Doe", user_contact_information:"John@doe.net", user_zip_code:"38505"}) %>
             <div class="container">
                 <div class="nav nav-tabs nav-justified" id="nav-tab" role="tablist">
                     <a class="nav-item nav-link profile-nav active" id="nav-farmer-tab" data-toggle="tab" href="#nav-farmer" role="tab" aria-controls="nav-farmer" aria-selected="true">Farmer</a>

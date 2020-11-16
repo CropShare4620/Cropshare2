@@ -1,12 +1,57 @@
+<!--
+DEFINE:
+user-name
+user-contact-information
+user-zip-code
+-->
+
 <section class="profile-header-section">
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-xl-2 col-lg-2 col-md-2 col-xs-3"><img class="profile-img" height="100" src="images/test_profile_pic.png" alt="" /></div>
+            <div class="col-xl-2 col-lg-2 col-md-2 col-xs-3"><img class="profile-img" height="100" src="images/test_profile_pic.png" alt=""/></div>
             <div class="col-xl-10 col-lg-10 col-md-10 col-xs-9">
                 <div class="row">
-                    <div class="col-lg-8"><h2>[John Doe]</h2></div>
-                    <div class="col-lg-8">[Contact Information]</div>
-                    <div class="col-lg-8">[Profile Statistics]</div>
+                    <button type="button" class="btn btn-outline-light btn-sm" id="profile-modal-button" data-toggle="modal" data-target="#profile-modal">
+                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-gear" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M8.837 1.626c-.246-.835-1.428-.835-1.674 0l-.094.319A1.873 1.873 0 0 1 4.377 3.06l-.292-.16c-.764-.415-1.6.42-1.184 1.185l.159.292a1.873 1.873 0 0 1-1.115 2.692l-.319.094c-.835.246-.835 1.428 0 1.674l.319.094a1.873 1.873 0 0 1 1.115 2.693l-.16.291c-.415.764.42 1.6 1.185 1.184l.292-.159a1.873 1.873 0 0 1 2.692 1.116l.094.318c.246.835 1.428.835 1.674 0l.094-.319a1.873 1.873 0 0 1 2.693-1.115l.291.16c.764.415 1.6-.42 1.184-1.185l-.159-.291a1.873 1.873 0 0 1 1.116-2.693l.318-.094c.835-.246.835-1.428 0-1.674l-.319-.094a1.873 1.873 0 0 1-1.115-2.692l.16-.292c.415-.764-.42-1.6-1.185-1.184l-.291.159A1.873 1.873 0 0 1 8.93 1.945l-.094-.319zm-2.633-.283c.527-1.79 3.065-1.79 3.592 0l.094.319a.873.873 0 0 0 1.255.52l.292-.16c1.64-.892 3.434.901 2.54 2.541l-.159.292a.873.873 0 0 0 .52 1.255l.319.094c1.79.527 1.79 3.065 0 3.592l-.319.094a.873.873 0 0 0-.52 1.255l.16.292c.893 1.64-.902 3.434-2.541 2.54l-.292-.159a.873.873 0 0 0-1.255.52l-.094.319c-.527 1.79-3.065 1.79-3.592 0l-.094-.319a.873.873 0 0 0-1.255-.52l-.292.16c-1.64.893-3.433-.902-2.54-2.541l.159-.292a.873.873 0 0 0-.52-1.255l-.319-.094c-1.79-.527-1.79-3.065 0-3.592l.319-.094a.873.873 0 0 0 .52-1.255l-.16-.292c-.892-1.64.902-3.433 2.541-2.54l.292.159a.873.873 0 0 0 1.255-.52l.094-.319z"/>
+                            <path fill-rule="evenodd" d="M8 5.754a2.246 2.246 0 1 0 0 4.492 2.246 2.246 0 0 0 0-4.492zM4.754 8a3.246 3.246 0 1 1 6.492 0 3.246 3.246 0 0 1-6.492 0z"/>
+                        </svg>
+                    </button>
+                    <div class="col-lg-8"><h2><%= user_name %></h2></div>
+                    <div class="col-lg-8"><%= user_contact_information %></div>
+                    <div class="col-lg-8"><%= user_zip_code %></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal profile-modal fade" id="profile-modal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>Edit Profile</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="user-name-label" class="col-form-label">Name:</label>
+                            <input type="text" class="form-control" placeholder="<%= user_name %>">
+                        </div>
+                        <div class="form-group">
+                            <label for="user-quantity-label" class="col-form-label">Contact Information:</label>
+                            <input type="text" class="form-control"" placeholder="<%= user_contact_information %>"></input>
+                        </div>
+                        <div class="form-group">
+                            <label for="user-price-label" class="col-form-label">Zip Code:</label>
+                            <input type="text" class="form-control"" placeholder="<%= user_zip_code %>"></input>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-secondary btn-sm" id="famer-modal-submit" data-dismiss="modal">Save Changes</button>
                 </div>
             </div>
         </div>
